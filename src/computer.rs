@@ -243,7 +243,7 @@ impl Computer {
 
         self.currently_computed_is_0 = !self.currently_computed_is_0;
 
-        let workgroup_width = 8;
+        let workgroup_width = 16;
         assert_eq!(self.cells_width % workgroup_width, 0);
         assert_eq!(self.cells_height % workgroup_width, 0);
         let workgroup_count_x = self.cells_width.div_ceil(workgroup_width);
