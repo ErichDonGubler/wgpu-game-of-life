@@ -12,6 +12,7 @@ pub fn criterion_benchmark(c: &mut Criterion) {
     let (instance, device, queue) = pollster::block_on(setup_device());
     test_computer(&instance, &device, &queue, 1024, c);
     test_computer(&instance, &device, &queue, 2048, c);
+    test_computer(&instance, &device, &queue, 4096, c);
 }
 
 fn test_computer(
